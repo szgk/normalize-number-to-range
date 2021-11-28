@@ -1,0 +1,29 @@
+{
+  "name": "normalize-number-to-range",
+  "version": "1.0.0",
+  "description": "normalize number to range",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest ./*.spec.js",
+    "transpile": "babel normalize-number-to-range.js --out-file index.js --presets minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:szgk/normalize-number-to-range.git"
+  },
+  "keywords": [
+    "normalize",
+    "degree",
+    "radian"
+  ],
+  "author": "szgk <dev@szgk.xyz>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-preset-minify": "^0.5.1",
+    "core-js": "^3.19.1",
+    "jest": "^27.3.1"
+  }
+}

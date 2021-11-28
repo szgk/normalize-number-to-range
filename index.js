@@ -1,0 +1,4 @@
+require("core-js/modules/esnext.global-this.js"),function(a,b){if("function"==typeof define&&define.amd)define(["exports","core-js/modules/es.math.sign.js"],b);else if("undefined"!=typeof exports)b(exports,require("core-js/modules/es.math.sign.js"));else{var c={exports:{}};b(c.exports,a.esMathSign),a.normalizeNumberToRange=c.exports}}("undefined"==typeof globalThis?"undefined"==typeof self?this:self:globalThis,function(a){"use strict";Object.defineProperty(a,"__esModule",{value:!0}),a.default=void 0;a.default=function(a,b,c){var d=Math.abs,e=Math.sign,f=Math.max(b,c),g=Math.min(b,c),h=c-b;// in range
+if(a>=g&&a<=f)return a;// greater than range
+if(a>f){var i=e(a)?a-f:d(f)-d(a);return g+(i>h?i%h:i)}// less than range
+if(a<g){var j=g-a;return e(a)||(a>f&&(j=d(f)-d(a)),a<g&&(j=e(g)?g-a:a-g)),f-(j>h?j%h:j)}}});
